@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using SpaceInvaders.src.Pieces;
 
 
 namespace SpaceInvaders.src.GUI
@@ -38,6 +39,18 @@ namespace SpaceInvaders.src.GUI
         {
             Border.Location = loc;
         }
+
+        public void Clicked(Player p)
+        {
+            if(Id == 1)//reset button
+            {
+                Field.SetUpInvaders();
+                Invader.Speed = 1;
+                p.Score = 0;
+            }     
+
+        }
+
 
     }
 }

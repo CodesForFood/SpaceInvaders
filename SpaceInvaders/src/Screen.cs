@@ -53,7 +53,7 @@ namespace SpaceInvaders.src
 
         public void ShowButtons()
         {
-            foreach(var btn in display.ButtonList)
+            foreach(var btn in Display.ButtonList)
             {
                 Batch.Draw(Image.BulletPic, btn.Border, Color.Red);
                 Batch.DrawString(Image.Font, btn.Text ,btn.TextLoc, Color.Black);
@@ -77,8 +77,12 @@ namespace SpaceInvaders.src
         public void ShowScore(Player p)
         {
             Batch.DrawString(Image.Font, "Score: " + p.Score.ToString(), new Vector2(Field.Walls.X, 10), Color.Black);
-        }     
+        }
 
-
+        public void ShowDebug()
+        {
+            Batch.DrawString(Image.Font, "Speed: " + Invader.Speed.ToString(), new Vector2(Field.Walls.X, 70), Color.Black);
+            Batch.DrawString(Image.Font, "Number Alive: " + Field.NumAlive.ToString(), new Vector2(Field.Walls.X, 90), Color.Black);
+        }
     }
 }

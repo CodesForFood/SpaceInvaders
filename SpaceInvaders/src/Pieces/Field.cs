@@ -20,6 +20,19 @@ namespace SpaceInvaders.src.Pieces
 
         public static bool GoingRight { get; set; } = true;
 
+        public static int NumAlive
+        {
+            get
+            {
+                int counter = 0;
+                foreach(var vader in InvaderFleet)
+                {
+                    if (vader.IsAlive) { counter++; }
+                }
+                return counter;
+            }
+        }
+
 
         public Field()
         {
@@ -27,7 +40,7 @@ namespace SpaceInvaders.src.Pieces
             SetUpInvaders();
         }
 
-        void SetUpInvaders()
+        public static void SetUpInvaders()
         {
             for (int y = 0; y < InvaderFleet.GetLength(1); y++)
                 for (int x = 0; x < InvaderFleet.GetLength(0); x++)
@@ -46,12 +59,14 @@ namespace SpaceInvaders.src.Pieces
                     if ((vader.Border.X + vader.Border.Width) > Walls.X)
                     {
                         GoingRight = false;
-                        GoDown();                        
+                        GoDown();
+                        break;
                     }
                     else if ((vader.Border.X < 0))
                     {
                         GoingRight = true;
-                        GoDown();                       
+                        GoDown();
+                        break;
                     }
                 }
             }
@@ -61,8 +76,9 @@ namespace SpaceInvaders.src.Pieces
         {
             foreach (var vader in InvaderFleet)
             {
-                vader.Border.Y += 4;                
-            }         
+                vader.Border.Y += 20;                
+            }
+            Invader.Speed++;
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvaders.src.Pieces;
+using SpaceInvaders.src.GUI;
 
 
 namespace SpaceInvaders.src
@@ -62,7 +63,7 @@ namespace SpaceInvaders.src
             {
                 if (Field.GoingRight)
                 {
-                    vader.Border.X += Invader.Speed;                                      
+                    vader.Border.X += Invader.Speed;                                                          
                 }
                 else
                 {
@@ -118,6 +119,16 @@ namespace SpaceInvaders.src
             catch (Exception) { }
         }
 
+        public void ListenForButtons(Player p)
+        {
+            foreach(var btn in Display.ButtonList)
+            {
+                if(btn.Border.Contains(MousePos) && OnceLeftM())
+                {
+                    btn.Clicked(p);
+                }
+            }
+        }
 
 
     }

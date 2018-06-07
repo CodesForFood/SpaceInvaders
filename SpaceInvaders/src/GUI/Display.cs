@@ -15,7 +15,7 @@ namespace SpaceInvaders.src.GUI
     {
         public Rectangle MainBorder;
 
-        public List<Button> ButtonList;
+        public static List<Button> ButtonList;
 
         public Display()
         {

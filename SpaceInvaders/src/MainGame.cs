@@ -40,8 +40,8 @@ namespace SpaceInvaders.src
             ScreenHeight = 700;
             ScreenWidth = 1200;
 
-            Field.Walls.X = ScreenWidth - (float)(ScreenWidth * .1);
-            Field.Walls.Y = ScreenHeight - (float)(ScreenHeight * .1);
+            Field.Walls.X = ScreenWidth - (float)(ScreenWidth * .2);
+            Field.Walls.Y = ScreenHeight - (float)(ScreenHeight * .2);
         }
      
         protected override void Initialize()
@@ -76,6 +76,7 @@ namespace SpaceInvaders.src
             control.MovePlayer(player);
             control.FireBullets(player);
             control.BulletPhysics(player);
+            control.ListenForButtons(player);
 
             control.UpdateOldState();
             base.Update(gameTime);
@@ -93,6 +94,8 @@ namespace SpaceInvaders.src
 
             screen.ShowPlayer(player);           
             screen.ShowBullets(player);
+
+            screen.ShowDebug();
             
 
             spriteBatch.End();
