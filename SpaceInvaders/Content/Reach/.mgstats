@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/GamePics/Bullet.png","C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/Reach/GamePics/Bullet.xnb","TextureProcessor","Texture2DContent",142,597,0.0954241
+"C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/GamePics/Invader.png","C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/Reach/GamePics/Invader.xnb","TextureProcessor","Texture2DContent",1724,4181,0.0015916
+"C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/GamePics/Tank.png","C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/Reach/GamePics/Tank.xnb","TextureProcessor","Texture2DContent",1165,4181,0.0016537
+"C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/RegularFont.spritefont","C:/Programs/C#/SpaceInvaders/SpaceInvaders/Content/Reach/RegularFont.xnb","FontDescriptionProcessor","SpriteFontContent",2068,37922,0.0687343

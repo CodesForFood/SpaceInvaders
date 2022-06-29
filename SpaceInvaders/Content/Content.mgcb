@@ -1,8 +1,8 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/$(Platform)
-/intermediateDir:obj/$(Platform)
+/outputDir:C:\Programs\C#\SpaceInvaders\SpaceInvaders\bin\x64\Release\Content
+/intermediateDir:..\obj\x64\Release\Content
 /platform:Windows
 /config:
 /profile:Reach
@@ -12,13 +12,6 @@
 
 
 #---------------------------------- Content ---------------------------------#
-
-#begin RegularFont.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:RegularFont.spritefont
 
 #begin GamePics/Bullet.png
 /importer:TextureImporter
@@ -55,4 +48,11 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:GamePics/Tank.png
+
+#begin RegularFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:RegularFont.spritefont
 

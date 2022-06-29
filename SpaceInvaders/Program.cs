@@ -2,7 +2,7 @@
 
 namespace SpaceInvaders
 {
-#if WINDOWS || LINUX
+
     /// <summary>
     /// The main class.
     /// </summary>
@@ -18,5 +18,4 @@ namespace SpaceInvaders
                 game.Run();
         }
     }
-#endif
 }

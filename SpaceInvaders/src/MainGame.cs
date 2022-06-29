@@ -35,7 +35,7 @@ namespace SpaceInvaders.src
         public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";                     
+            Content.RootDirectory = "../../../../../../Content";                     
 
             ScreenHeight = 700;
             ScreenWidth = 1200;
